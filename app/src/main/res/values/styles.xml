@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/zise</item>
+        <item name="colorAccent">@color/zise</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.ImagesDetail">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@android:color/transparent</item>
+    </style>
+    <style name="MyCustomToolBarStyle" parent="ThemeOverlay.AppCompat.Light">
+       <!--用来定义标题栏文字颜色,setTitle时使用，自定义的toolbar中的textView不起效果-->
+        <item name="android:textColorSecondary">@color/white</item><!--用来定义弹出菜单icon的颜色(竖着排列的那三个点颜色，以及返回按钮等)-->
+        <!--用来定义弹出菜单OptionMenu文字的颜色，自定义的toolbar中的textView有效果-->
+    </style>
+</resources>
