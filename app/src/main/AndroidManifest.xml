@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.asus_pc.jianyue">
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -12,6 +22,10 @@
     <uses-permission android:name="android.permission.process_outgoing_calls" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -28,6 +42,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -38,7 +53,13 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".controller.option.OpinionActivity" />
         <activity android:name=".controller.option.AboutusActivity" />
-        <activity android:name=".controller.activity.homesActivity.CustomScanActivity"></activity>
+        <activity android:name=".controller.activity.homesActivity.CustomScanActivity" />
+        <activity android:name=".controller.activity.homesActivity.DetailsActivity" />
+        <activity android:name=".ImageBrowseActivity" />
+        <activity android:name=".controller.activity.VideoActivity" />
+        <activity android:name=".controller.activity.MusicActivity" />
+        <activity android:name=".controller.activity.homesActivity.PlayActivity"></activity>
+        <service android:name=".service.PlayService"/>
     </application>
 
 </manifest>

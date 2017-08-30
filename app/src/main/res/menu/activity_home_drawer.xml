@@ -5,7 +5,7 @@
         <item
             android:id="@+id/news"
             android:icon="@drawable/ic_news"
-            android:title="新闻阅读" />
+            android:title="新闻简读" />
         <item
             android:id="@+id/pictrue"
             android:icon="@drawable/ic_picture"

@@ -35,7 +35,10 @@ public class PictureFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View inflate = inflater.inflate(R.layout.picture_fragment, null);
+
         initView(inflate);
+
+
         return inflate;
     }
 
@@ -43,9 +46,12 @@ public class PictureFragment extends Fragment {
         tablayout = (TabLayout) inflate.findViewById(R.id.pictabblayout);
         viewpager = (ViewPager) inflate.findViewById(R.id.picviewpager);
         getData();
+
         PictureFragmentAdapters adapters=new PictureFragmentAdapters(getChildFragmentManager(),mlist);
-           viewpager.setAdapter(adapters);
+        viewpager.setAdapter(adapters);
         tablayout.setupWithViewPager(viewpager);
+
+
 
     }
 

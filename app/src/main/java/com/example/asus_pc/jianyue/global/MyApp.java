@@ -1,8 +1,13 @@
 package com.example.asus_pc.jianyue.global;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.Intent;
+import android.util.DisplayMetrics;
+import android.view.WindowManager;
 
 import com.example.asus_pc.jianyue.base.BaseActivity;
+import com.example.asus_pc.jianyue.service.PlayService;
 
 
 /**
@@ -18,10 +23,20 @@ import com.example.asus_pc.jianyue.base.BaseActivity;
  * 存放整个程序共享的数据
  */
 public class MyApp extends Application {
-    public static BaseActivity mContext;
+    public static Context sContext;
+    public static int sScreenWidth;
+    public static int sScreenHeight;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        sContext = getApplicationContext();
+
+        startService(new Intent(this, PlayService.class));
+        WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics dm = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(dm);
+        sScreenWidth = dm.widthPixels;
+        sScreenHeight = dm.heightPixels;
     }
 }

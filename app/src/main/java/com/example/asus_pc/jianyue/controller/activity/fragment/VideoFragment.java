@@ -32,6 +32,7 @@ public class VideoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         View inflate = inflater.inflate(R.layout.video_framgment, null);
 
         initView(inflate);
@@ -44,6 +45,7 @@ public class VideoFragment extends Fragment {
         getData();
         VideoFragmentAdapters adapters=new VideoFragmentAdapters(getChildFragmentManager(),mlist);
          viewpager.setAdapter(adapters);
+
         tablayout.setupWithViewPager(viewpager);
 
     }
@@ -59,4 +61,7 @@ public class VideoFragment extends Fragment {
         mlist.add(videanimfragment);
         mlist.add(varitefragment);
     }
+
+
+
 }

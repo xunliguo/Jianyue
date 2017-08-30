@@ -38,19 +38,18 @@ public class NewsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View inflate = inflater.inflate(R.layout.news_fragment, null);
-        initView(inflate);
-        return inflate;
+        View view = inflater.inflate(R.layout.news_fragment, null);
+        getdata();
+        initView(view);
+        return view;
     }
 
     private void initView(View inflate) {
         tablayout = (TabLayout) inflate.findViewById(R.id.tacblayout);
         viewpager = (ViewPager) inflate.findViewById(R.id.viewpager1);
-        getdata();
         FragmentAdapters adapters=new FragmentAdapters(getChildFragmentManager(),mlist);
         viewpager.setAdapter(adapters);
         tablayout.setTabMode(View.SCROLLBAR_POSITION_DEFAULT);
-        //第一个参数是字体颜色 第二歌参数是背景颜色
         tablayout.setupWithViewPager(viewpager);
     }
     public void getdata() {
@@ -62,9 +61,6 @@ public class NewsFragment extends Fragment {
         TourismFragment tourismfragment=new TourismFragment();//旅游
         FashionFragment fashionFragment=new FashionFragment();//时尚
         EntertainmentFrament entertainfragment=new EntertainmentFrament();//娱乐
-
-
-
         mlist.add(heaflinesfragment);
         mlist.add(carFragment);
         mlist.add(housframent);

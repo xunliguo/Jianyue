@@ -23,4 +23,8 @@
         <item name="android:textColorSecondary">@color/white</item><!--用来定义弹出菜单icon的颜色(竖着排列的那三个点颜色，以及返回按钮等)-->
         <!--用来定义弹出菜单OptionMenu文字的颜色，自定义的toolbar中的textView有效果-->
     </style>
+    <style name="popwin_anim">
+        <item name="android:windowEnterAnimation">@anim/pop_show_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_gone_anim</item>
+    </style>
 </resources>

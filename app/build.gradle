@@ -3,12 +3,23 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion "26.0.1"
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+
+    }
+
     defaultConfig {
         applicationId "com.example.asus_pc.jianyue"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+         ndk {
+
+                                 abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+                             }
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -24,6 +35,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+
+
+
+
+
+    compile files('libs/jsoup-1.7.3.jar')
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:25.3.1'
@@ -32,6 +50,13 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.journeyapps:zxing-android-embedded:3.3.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
-	compile 'com.github.limedroid:ARecyclerView:v1.2.1'
+    compile 'com.jcodecraeer:xrecyclerview:1.2.6'
+    compile 'com.github.chrisbanes:PhotoView:1.2.6'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.chanven.lib:cptr:1.1.0'
+    compile 'org.androidannotations:androidannotations:4.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.bartoszlipinski:recyclerviewheader2:2.0.1'
+    compile 'fm.jiecao:jiecaovideoplayer:2.0'
     testCompile 'junit:junit:4.12'
 }

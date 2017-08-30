@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="zise">#4E3E7F</color>
+
     <color name="navigation_checked_news_text_color">#FF4E3E80</color>
     <color name="navigation_checked_picture_text_color">#FFBA4A49</color>
     <color name="navigation_checked_video_text_color">#FFF16022</color>
@@ -33,6 +34,8 @@
     <color name="result_point_color">#C0FFFF00</color>
     <color name="laser_color">#0F0</color>
     <color name="corner_color">#00FF00</color>
+    <color name="main">#FF31C27C</color>
+    <color name="main_dark">#FF535353</color>
     <!-- QRCode scanner color end -->
 
 </resources>
